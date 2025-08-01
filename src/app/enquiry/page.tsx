@@ -115,7 +115,7 @@ export default function EnquiryForm() {
     return (
       <>
         <Header />
-        <section className="py-16 lg:py-24 bg-gradient-to-b from-pink-50 to-white">
+        <section className="py-16 lg:py-24 bg-gray-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
               <div className="relative w-24 h-24 mx-auto mb-8">
@@ -134,7 +134,7 @@ export default function EnquiryForm() {
               <Link href="/enquiry">
                 <Button
                   onClick={() => setIsSubmitted(false)}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full transform transition-all hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-6 rounded-full transform transition-all hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Submit Another Enquiry
                 </Button>
@@ -150,7 +150,7 @@ export default function EnquiryForm() {
   return (
     <>
       <Header />
-      <section className="py-16 lg:py-24 bg-pink-50">
+      <section className="py-16 lg:py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in-up">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -211,7 +211,7 @@ export default function EnquiryForm() {
                   </div>
                 </div>
 
-                <div className="mt-8 p-6 bg-pink-50">
+                <div className="mt-8 p-6 bg-gray-50">
                   <h4 className="font-semibold text-gray-900 mb-2">
                     Free Consultation
                   </h4>

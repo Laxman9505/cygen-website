@@ -54,7 +54,7 @@ export const navigationData = [
         title: "Cloud Services & IT Infrastructure",
         description:
           "We provide cloud services and IT infrastructure to help you manage your IT infrastructure",
-        href: "/services/cloud-services-it-infrastructure",
+        href: "/services/cloud-services-and-it-infrastructure",
         icon: Smartphone,
       },
       {
@@ -155,7 +155,7 @@ export const navigationData = [
         title: "About Us",
         description:
           "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
-        href: "/company/about-us",
+        href: "/about-us",
         icon: Contact,
       },
       {
@@ -183,7 +183,7 @@ export const navigationData = [
         title: "Contact Us",
         description:
           "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
-        href: "/company/contact-us",
+        href: "/enquiry",
         icon: Contact,
       },
     ],

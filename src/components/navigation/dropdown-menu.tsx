@@ -48,11 +48,12 @@ export default function DropdownMenu({
 
   return (
     <div
-      className={`absolute top-full -mt-2 ${getDropdownWidth()} max-h-[28rem] bg-white rounded-2xl shadow-xl border border-gray-100 z-50 lg:block hidden transform transition-all duration-200 ease-out animate-in fade-in-0 slide-in-from-left-2`}
+      className={`fixed left-1/2 ${getDropdownWidth()} max-h-[28rem] bg-white rounded-2xl shadow-md border border-gray-100 z-50 lg:block hidden transform transition-all duration-200 ease-out animate-in fade-in-0 slide-in-from-top-2`}
       style={{
-        left: 0,
+        transform: "translate(-50%, 0)",
         maxWidth: "calc(100vw - 2rem)",
         maxHeight: "calc(100vh - 4rem)",
+        top: "4rem",
       }}
     >
       <div className="flex">
@@ -65,7 +66,7 @@ export default function DropdownMenu({
               {overview.description}
             </p>
             <Link href={overview.ctaHref}>
-              <Button className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white font-semibold py-2 px-3 rounded-lg transition-all duration-200 text-sm">
+              <Button className="w-full border-2 border-blue-500 text-blue-500 hover:bg-blue-50 font-semibold py-5 px-4 rounded-full transition-all duration-200 text-sm">
                 {overview.ctaText}
               </Button>
             </Link>
