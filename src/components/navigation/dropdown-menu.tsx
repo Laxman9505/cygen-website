@@ -52,6 +52,7 @@ export default function DropdownMenu({
       style={{
         left: 0,
         maxWidth: "calc(100vw - 2rem)",
+        maxHeight: "calc(100vh - 4rem)",
       }}
     >
       <div className="flex">
@@ -73,16 +74,19 @@ export default function DropdownMenu({
 
         <div className={`${overview ? "w-2/3" : "w-full"} p-4`}>
           <h3 className="text-xl font-bold text-gray-900 mb-4">{menuTitle}</h3>
-          <div className="space-y-2 max-h-[20rem] overflow-y-auto">
+          <div className="space-y-2 max-h-[20rem] overflow-y-auto scrollbar-hide">
             {rows.map((row, rowIndex) => (
-              <div key={rowIndex} className="grid grid-cols-2 gap-3">
+              <div
+                key={rowIndex}
+                className="grid grid-cols-1 xl:grid-cols-2 gap-3"
+              >
                 {row.map((item, index) => (
                   <Link
                     key={index}
                     href={item.href}
-                    className="flex items-center space-x-2 p-2 hover:bg-blue-50 rounded-lg transition-all duration-200 group hover:scale-105"
+                    className="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 group"
                   >
-                    <div className="w-7 h-7 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-all duration-200 flex-shrink-0 group-hover:scale-110">
+                    <div className="w-7 h-7 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-200 flex-shrink-0">
                       <item.icon className="h-4 w-4 text-blue-600 group-hover:text-blue-700 transition-colors" />
                     </div>
                     <div className="flex-1 min-w-0">

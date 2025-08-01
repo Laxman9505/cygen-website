@@ -1,12 +1,12 @@
 /** @format */
 
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Roboto } from "next/font/google";
 import type React from "react";
 import "./globals.css";
 
 // const inter = Inter({ subsets: ["latin"] });
-const lato = Lato({
+const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100", "300", "400", "700", "900"],
 });
@@ -112,7 +112,7 @@ export default function RootLayout({
           `}
         </script>
       </head>
-      <body className={lato.className}>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }
