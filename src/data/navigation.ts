@@ -1,107 +1,128 @@
 /** @format */
 
 import {
-  Award,
   BarChart3,
   BookOpen,
-  Briefcase,
   Building2,
-  Calendar,
   Code,
+  Contact,
   Database,
   Download,
-  Factory,
-  FileText,
-  GraduationCap,
-  Headphones,
-  MapPin,
+  Handshake,
   MessageCircle,
+  Newspaper,
   Shield,
-  ShoppingCart,
   Smartphone,
+  SquareTerminal,
+  User,
   Users,
 } from "lucide-react";
 
 export const navigationData = [
   {
-    title: "Products",
+    title: "Services",
     items: [
       {
         title: "Custom App Development",
         description: "We develop custom apps for your business",
-        href: "/products/custom-app-development",
+        href: "/services/custom-app-development",
         icon: Smartphone,
       },
       {
-        title: "Ramdom Product 2",
-        description: "Ramdom Product 2 description",
-        href: "/products/ramdom-product-2",
+        title: "Business Intelligence & Analytics",
+        description:
+          "We provide business intelligence and analytics services to help you make data-driven decisions",
+        href: "/services/business-intelligence-analytics",
         icon: Database,
       },
       {
-        title: "Ramdom Product 3",
-        description: "Ramdom Product 3 description",
-        href: "/products/ramdom-product-3",
+        title: "Managed IT Services",
+        description:
+          "We provide managed IT services to help you manage your IT infrastructure",
+        href: "/services/managed-it-services",
         icon: Shield,
       },
       {
-        title: "Ramdom Product 4",
-        description: "Ramdom Product 4 description",
-        href: "/products/ramdom-product-4",
+        title: "Cloud Services & IT Infrastructure",
+        description:
+          "We provide cloud services and IT infrastructure to help you manage your IT infrastructure",
+        href: "/services/cloud-services-it-infrastructure",
         icon: Smartphone,
       },
       {
-        title: "Ramdom Product 5",
-        description: "Ramdom Product 5 description",
-        href: "/products/ramdom-product-5",
+        title: "Cybersecurity",
+        description:
+          "We provide cybersecurity services to help you protect your data",
+        href: "/services/cybersecurity",
         icon: Code,
       },
       {
-        title: "Ramdom Product 6",
-        description: "Ramdom Product 6 description",
-        href: "/products/ramdom-product-6",
+        title: "AI Solutions & Business Automation",
+        description:
+          "We provide AI solutions and business automation to help you automate your business",
+        href: "/services/ai-solutions-business-automation",
         icon: BarChart3,
       },
-    ],
-  },
-  {
-    title: "Solutions",
-    items: [
       {
-        title: "Ramdom Solution 1",
-        description: "Ramdom Solution 1 description",
-        href: "/solutions/ramdom-solution-1",
+        title: "IT Consulting & Strategy",
+        description:
+          "We provide IT consulting and strategy to help you plan your IT infrastructure",
+        href: "/services/it-consulting-strategy",
         icon: Building2,
       },
       {
-        title: "Ramdom Solution 2",
-        description: "Ramdom Solution 2 description",
-        href: "/solutions/ramdom-solution-2",
-        icon: Factory,
+        title: "Backup & Disaster Recovery",
+        description:
+          "We provide backup and disaster recovery services to help you protect your data",
+        href: "/services/backup-disaster-recovery",
+        icon: Shield,
       },
       {
-        title: "Ramdom Solution 3",
-        description: "Ramdom Solution 3 description",
-        href: "/solutions/ramdom-solution-3",
-        icon: ShoppingCart,
+        title: "Digital Workplace Setup",
+        description:
+          "We provide digital workplace setup services to help you set up your digital workplace",
+        href: "/services/digital-workplace-setup",
+        icon: Building2,
       },
+    ],
+  },
+
+  {
+    title: "Products",
+    items: [
       {
-        title: "Ramdom Solution 4",
-        description: "Ramdom Solution 4 description",
-        href: "/solutions/ramdom-solution-4",
-        icon: GraduationCap,
-      },
-      {
-        title: "Ramdom Solution 5",
-        description: "Ramdom Solution 5 description",
-        href: "/solutions/ramdom-solution-5",
+        title: "CRM",
+        description:
+          "We provide CRM solutions to help you manage your customers and sales",
+        href: "/products/crm",
         icon: Users,
       },
       {
-        title: "Ramdom Solution 6",
-        description: "Ramdom Solution 6 description",
-        href: "/solutions/ramdom-solution-6",
-        icon: MapPin,
+        title: "POS",
+        description: "We provide POS solutions to help you manage your sales",
+        href: "/products/pos",
+        icon: SquareTerminal,
+      },
+      {
+        title: "Connect",
+        description:
+          "We provide Connect solutions to help you manage your customers and sales",
+        href: "/products/connect",
+        icon: Users,
+      },
+      {
+        title: "Cygnage",
+        description:
+          "We provide Cygnage solutions to help you manage your customers and sales",
+        href: "/products/cygnage",
+        icon: Code,
+      },
+      {
+        title: "Saute",
+        description:
+          "We provide Saute solutions to help you manage your customers and sales",
+        href: "/products/saute",
+        icon: Users,
       },
     ],
   },
@@ -109,40 +130,39 @@ export const navigationData = [
     title: "Company",
     items: [
       {
-        title: "Ramdom Company 1",
-        description: "Ramdom Company 1 description",
-        href: "/company/ramdom-company-1",
+        title: "About Us",
+        description:
+          "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
+        href: "/company/about-us",
+        icon: Contact,
+      },
+      {
+        title: "Press & Media",
+        description:
+          "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
+        href: "/company/press-media",
+        icon: Newspaper,
+      },
+      {
+        title: "Career",
+        description:
+          "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
+        href: "/company/career",
         icon: Users,
       },
       {
-        title: "Ramdom Company 2",
-        description: "Ramdom Company 2 description",
-        href: "/company/ramdom-company-2",
-        icon: Award,
+        title: "Partners",
+        description:
+          "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
+        href: "/company/partners",
+        icon: Handshake,
       },
       {
-        title: "Ramdom Company 3",
-        description: "Ramdom Company 3 description",
-        href: "/company/ramdom-company-3",
-        icon: Briefcase,
-      },
-      {
-        title: "Ramdom Company 4",
-        description: "Ramdom Company 4 description",
-        href: "/company/ramdom-company-4",
-        icon: MapPin,
-      },
-      {
-        title: "Ramdom Company 5",
-        description: "Ramdom Company 5 description",
-        href: "/company/ramdom-company-5",
-        icon: FileText,
-      },
-      {
-        title: "Ramdom Company 6",
-        description: "Ramdom Company 6 description",
-        href: "/company/ramdom-company-6",
-        icon: Users,
+        title: "Contact Us",
+        description:
+          "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
+        href: "/company/contact-us",
+        icon: Contact,
       },
     ],
   },
@@ -150,40 +170,31 @@ export const navigationData = [
     title: "Resources",
     items: [
       {
-        title: "Ramdom Resource 1",
-        description: "Ramdom Resource 1 description",
+        title: "Testimonials",
+        description: "Look at what our clients say about us",
         href: "/resources/ramdom-resource-1",
+        icon: User,
+      },
+      {
+        title: "Insights",
+        description:
+          "We provide insights to help you make data-driven decisions",
+        href: "/resources/ramdom-resource-2",
         icon: BookOpen,
       },
       {
-        title: "Ramdom Resource 2",
-        description: "Ramdom Resource 2 description",
-        href: "/resources/ramdom-resource-2",
-        icon: FileText,
-      },
-      {
-        title: "Ramdom Resource 3",
-        description: "Ramdom Resource 3 description",
+        title: "Newsletters",
+        description:
+          "We provide newsletters to help you stay updated with the latest trends",
         href: "/resources/ramdom-resource-3",
         icon: MessageCircle,
       },
       {
-        title: "Ramdom Resource 4",
-        description: "Ramdom Resource 4 description",
+        title: "Glossary / Help",
+        description:
+          "We provide glossary and help to help you understand our solutions",
         href: "/resources/ramdom-resource-4",
         icon: Download,
-      },
-      {
-        title: "Ramdom Resource 5",
-        description: "Ramdom Resource 5 description",
-        href: "/resources/ramdom-resource-5",
-        icon: Calendar,
-      },
-      {
-        title: "Ramdom Resource 6",
-        description: "Ramdom Resource 6 description",
-        href: "/resources/ramdom-resource-6",
-        icon: Headphones,
       },
     ],
   },

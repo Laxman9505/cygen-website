@@ -16,7 +16,7 @@ interface DropdownMenuProps {
 
 export default function DropdownMenu({ items }: DropdownMenuProps) {
   return (
-    <div className="absolute top-full left-0 -mt-2 w-80 bg-white rounded-2xl shadow-xl border border-gray-100 py-4 z-50">
+    <div className="absolute top-full left-0 -mt-2 w-[32rem] max-h-[32rem] overflow-y-auto bg-white rounded-2xl shadow-xl border border-gray-100 py-4 z-50">
       {items.map((item, index) => (
         <Link
           key={index}
