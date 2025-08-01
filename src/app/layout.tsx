@@ -1,11 +1,15 @@
 /** @format */
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lato } from "next/font/google";
 import type React from "react";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Affordable POS System & Software Provider in Sydney,Australia.",
@@ -108,7 +112,7 @@ export default function RootLayout({
           `}
         </script>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={lato.className}>{children}</body>
     </html>
   );
 }

@@ -21,6 +21,13 @@ import {
 export const navigationData = [
   {
     title: "Services",
+    overview: {
+      title: "Overview",
+      description:
+        "Our comprehensive IT services are designed to transform your business with cutting-edge technology solutions.",
+      ctaText: "LEARN MORE",
+      ctaHref: "/services",
+    },
     items: [
       {
         title: "Custom App Development",
@@ -29,19 +36,20 @@ export const navigationData = [
         icon: Smartphone,
       },
       {
-        title: "Business Intelligence & Analytics",
-        description:
-          "We provide business intelligence and analytics services to help you make data-driven decisions",
-        href: "/services/business-intelligence-analytics",
-        icon: Database,
-      },
-      {
         title: "Managed IT Services",
         description:
           "We provide managed IT services to help you manage your IT infrastructure",
         href: "/services/managed-it-services",
         icon: Shield,
       },
+      {
+        title: "Business Intelligence & Analytics",
+        description:
+          "We provide business intelligence and analytics services to help you make data-driven decisions",
+        href: "/services/business-intelligence-analytics",
+        icon: Database,
+      },
+
       {
         title: "Cloud Services & IT Infrastructure",
         description:
@@ -89,6 +97,13 @@ export const navigationData = [
 
   {
     title: "Products",
+    overview: {
+      title: "Overview",
+      description:
+        "Our innovative products are built to streamline your operations and drive business growth.",
+      ctaText: "LEARN MORE",
+      ctaHref: "/products",
+    },
     items: [
       {
         title: "CRM",
@@ -128,6 +143,13 @@ export const navigationData = [
   },
   {
     title: "Company",
+    overview: {
+      title: "Overview",
+      description:
+        "Learn about our mission, team, and the values that drive our commitment to excellence.",
+      ctaText: "LEARN MORE",
+      ctaHref: "/company",
+    },
     items: [
       {
         title: "About Us",
@@ -168,6 +190,13 @@ export const navigationData = [
   },
   {
     title: "Resources",
+    overview: {
+      title: "Overview",
+      description:
+        "Access valuable insights, testimonials, and resources to help you make informed decisions.",
+      ctaText: "LEARN MORE",
+      ctaHref: "/resources",
+    },
     items: [
       {
         title: "Testimonials",

@@ -44,26 +44,40 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
             {expandedSection === section.title && (
               <div className="bg-gray-50">
-                {section.items.map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    onClick={onClose}
-                    className="flex items-center space-x-3 px-8 py-3 hover:bg-blue-50 transition-colors"
-                  >
-                    <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <item.icon className="h-4 w-4 text-blue-600" />
-                    </div>
-                    <div>
-                      <div className="font-medium text-gray-900">
-                        {item.title}
+                {section.overview && (
+                  <div className="px-6 py-4 border-b border-gray-200">
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      {section.overview.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 mb-3">
+                      {section.overview.description}
+                    </p>
+                    <Link href={section.overview.ctaHref} onClick={onClose}>
+                      <Button className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white text-sm py-2">
+                        {section.overview.ctaText}
+                      </Button>
+                    </Link>
+                  </div>
+                )}
+                <div className="grid grid-cols-1 gap-1">
+                  {section.items.map((item, index) => (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      onClick={onClose}
+                      className="flex items-center space-x-3 px-6 py-3 hover:bg-blue-50 transition-all duration-200 group hover:scale-105"
+                    >
+                      <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-all duration-200 group-hover:scale-110">
+                        <item.icon className="h-4 w-4 text-blue-600 group-hover:text-blue-700" />
                       </div>
-                      <div className="text-xs text-gray-500">
-                        {item.description}
+                      <div>
+                        <div className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
+                          {item.title}
+                        </div>
                       </div>
-                    </div>
-                  </Link>
-                ))}
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
           </div>
