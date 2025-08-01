@@ -16,49 +16,133 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle, Mail, MapPin, Phone, Send } from "lucide-react";
+import Link from "next/link";
 import type React from "react";
 import { useState } from "react";
 
 export default function EnquiryForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneCountry: "+61",
+    phone: "",
+    company: "",
+    industry: "",
+    message: "",
+    agreement: false,
+  });
+
+  const phoneCountries = [
+    { code: "+61", country: "Australia" },
+    { code: "+64", country: "New Zealand" },
+    { code: "+44", country: "United Kingdom" },
+    { code: "+1", country: "Canada" },
+  ];
+
+  const auPhoneRegex = /^(?:\+61|0)[2-478](?:[ -]?[0-9]){8}$/;
+
+  const handleInputChange = (field: string, value: string | boolean) => {
+    setFormData((prev) => ({
+      ...prev,
+      [field]: value,
+    }));
+  };
+
+  const validatePhoneNumber = (phone: string) => {
+    if (formData.phoneCountry === "+61") {
+      return auPhoneRegex.test(phone.replace(/\s/g, ""));
+    }
+    return true;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!validatePhoneNumber(formData.phone)) {
+      alert("Please enter a valid Australian phone number");
+      return;
+    }
+
     setIsLoading(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: `${formData.phoneCountry}${formData.phone}`,
+          company: formData.company,
+          industry: formData.industry,
+          message: formData.message,
+        }),
+      });
 
-    setIsLoading(false);
-    setIsSubmitted(true);
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneCountry: "+61",
+          phone: "",
+          company: "",
+          industry: "",
+          message: "",
+          agreement: false,
+        });
+      } else {
+        throw new Error(result.message || "Failed to send email");
+      }
+    } catch (error) {
+      console.error("Email sending failed:", error);
+      alert("Failed to send enquiry. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (isSubmitted) {
     return (
       <>
         <Header />
-        <section className="py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-teal-50">
+        <section className="py-16 lg:py-24 bg-gradient-to-b from-pink-50 to-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
-              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce-in">
-                <CheckCircle className="h-10 w-10 text-green-600" />
+              <div className="relative w-24 h-24 mx-auto mb-8">
+                <div className="absolute inset-0 bg-green-200 rounded-full blur-lg animate-pulse"></div>
+                <div className="relative w-full h-full bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center animate-bounce-slow">
+                  <CheckCircle className="h-12 w-12 text-white" />
+                </div>
               </div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl lg:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 mb-6">
                 Thank You!
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-600 mb-10 leading-relaxed">
                 Your enquiry has been submitted successfully. Our team will get
                 back to you within 24 hours.
               </p>
-              <Button
-                onClick={() => setIsSubmitted(false)}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full"
-              >
-                Submit Another Enquiry
-              </Button>
+              <Link href="/enquiry">
+                <Button
+                  onClick={() => setIsSubmitted(false)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full transform transition-all hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  Submit Another Enquiry
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
+        <Footer />
       </>
     );
   }
@@ -93,7 +177,9 @@ export default function EnquiryForm() {
                     </div>
                     <div>
                       <div className="font-semibold text-gray-900">Email</div>
-                      <div className="text-gray-600">hello@cygen.com.au</div>
+                      <div className="text-gray-600">
+                        sales@cygenconsulting.com.au
+                      </div>
                     </div>
                   </div>
 
@@ -103,7 +189,10 @@ export default function EnquiryForm() {
                     </div>
                     <div>
                       <div className="font-semibold text-gray-900">Phone</div>
-                      <div className="text-gray-600">+61 2 8123 4567</div>
+                      <div className="text-gray-600">
+                        {" "}
+                        +61 458 116 301/+61 402 502 649
+                      </div>
                     </div>
                   </div>
 
@@ -116,7 +205,7 @@ export default function EnquiryForm() {
                         Locations
                       </div>
                       <div className="text-gray-600">
-                        Sydney, Melbourne, Brisbane
+                        Level 3/90 Phillip St, Parramatta, NSW - 2150
                       </div>
                     </div>
                   </div>
@@ -154,6 +243,10 @@ export default function EnquiryForm() {
                           required
                           placeholder="John"
                           className="w-full"
+                          value={formData.firstName}
+                          onChange={(e) =>
+                            handleInputChange("firstName", e.target.value)
+                          }
                         />
                       </div>
                       <div>
@@ -168,6 +261,10 @@ export default function EnquiryForm() {
                           required
                           placeholder="Doe"
                           className="w-full"
+                          value={formData.lastName}
+                          onChange={(e) =>
+                            handleInputChange("lastName", e.target.value)
+                          }
                         />
                       </div>
                     </div>
@@ -191,6 +288,10 @@ export default function EnquiryForm() {
                           required
                           placeholder="john@company.com"
                           className="w-full"
+                          value={formData.email}
+                          onChange={(e) =>
+                            handleInputChange("email", e.target.value)
+                          }
                         />
                       </div>
                       <div>
@@ -200,12 +301,45 @@ export default function EnquiryForm() {
                         >
                           Phone Number
                         </label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          placeholder="+61 4XX XXX XXX"
-                          className="w-full"
-                        />
+                        <div className="flex gap-2">
+                          <Select
+                            value={formData.phoneCountry}
+                            onValueChange={(value) =>
+                              handleInputChange("phoneCountry", value)
+                            }
+                          >
+                            <SelectTrigger className="w-[120px] shrink-0">
+                              <SelectValue placeholder="Country" />
+                            </SelectTrigger>
+                            <SelectContent
+                              position="popper"
+                              className="z-[100]"
+                            >
+                              {phoneCountries.map((country) => (
+                                <SelectItem
+                                  key={country.code}
+                                  value={country.code}
+                                >
+                                  {country.code}
+                                </SelectItem>
+                              ))}
+                            </SelectContent>
+                          </Select>
+                          <Input
+                            id="phone"
+                            type="tel"
+                            placeholder={
+                              formData.phoneCountry === "+61"
+                                ? "412 345 678"
+                                : "Phone number"
+                            }
+                            className="w-full"
+                            value={formData.phone}
+                            onChange={(e) =>
+                              handleInputChange("phone", e.target.value)
+                            }
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -226,6 +360,10 @@ export default function EnquiryForm() {
                           id="company"
                           placeholder="Your Company Pty Ltd"
                           className="w-full"
+                          value={formData.company}
+                          onChange={(e) =>
+                            handleInputChange("company", e.target.value)
+                          }
                         />
                       </div>
                       <div>
@@ -235,11 +373,15 @@ export default function EnquiryForm() {
                         >
                           Industry
                         </label>
-                        <Select>
+                        <Select
+                          onValueChange={(value) =>
+                            handleInputChange("industry", value)
+                          }
+                        >
                           <SelectTrigger className="w-full">
                             <SelectValue placeholder="Select your industry" />
                           </SelectTrigger>
-                          <SelectContent>
+                          <SelectContent position="popper">
                             <SelectItem value="technology">
                               Technology
                             </SelectItem>
@@ -262,12 +404,24 @@ export default function EnquiryForm() {
                         id="message"
                         placeholder="Give us some details."
                         className="w-full h-24"
+                        value={formData.message}
+                        onChange={(e) =>
+                          handleInputChange("message", e.target.value)
+                        }
                       />
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <Checkbox id="agreement" required className="mt-1" />
+                    <Checkbox
+                      id="agreement"
+                      required
+                      className="mt-1"
+                      checked={formData.agreement}
+                      onCheckedChange={(checked) =>
+                        handleInputChange("agreement", checked as boolean)
+                      }
+                    />
                     <label
                       htmlFor="agreement"
                       className="text-sm text-gray-600 leading-relaxed"

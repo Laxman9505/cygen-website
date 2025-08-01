@@ -13,29 +13,57 @@ import Image from "next/image";
 import Link from "next/link";
 
 const footerSections = {
-  products: [
-    { name: "Cloud Platform", href: "/products/cloud-platform" },
-    { name: "Data Analytics", href: "/products/data-analytics" },
-    { name: "Security Shield", href: "/products/security-shield" },
-    { name: "Mobile Solutions", href: "/products/mobile-solutions" },
+  services: [
+    {
+      name: "Custom App Development",
+      href: "/services/custom-app-development",
+    },
+    {
+      name: "Business Intelligence & Analytics",
+      href: "/services/business-intelligence-analytics",
+    },
+    { name: "Managed IT Services", href: "/services/managed-it-services" },
+    {
+      name: "Cloud Services & IT Infrastructure",
+      href: "/services/cloud-services-it-infrastructure",
+    },
+    { name: "Cybersecurity", href: "/services/cybersecurity" },
+    {
+      name: "AI Solutions & Business Automation",
+      href: "/services/ai-solutions-business-automation",
+    },
+    {
+      name: "IT Consulting & Strategy",
+      href: "/services/it-consulting-strategy",
+    },
+    {
+      name: "Backup & Disaster Recovery",
+      href: "/services/backup-disaster-recovery",
+    },
+    {
+      name: "Digital Workplace Setup",
+      href: "/services/digital-workplace-setup",
+    },
   ],
-  solutions: [
-    { name: "Enterprise", href: "/solutions/enterprise" },
-    { name: "Manufacturing", href: "/solutions/manufacturing" },
-    { name: "E-commerce", href: "/solutions/ecommerce" },
-    { name: "Healthcare", href: "/solutions/healthcare" },
+  products: [
+    { name: "CRM", href: "/products/crm" },
+    { name: "POS", href: "/products/pos" },
+    { name: "Connect", href: "/products/connect" },
+    { name: "Cygnage", href: "/products/cygnage" },
+    { name: "Saute", href: "/products/saute" },
   ],
   company: [
     { name: "About Us", href: "/company/about" },
-    { name: "Careers", href: "/company/careers" },
-    { name: "Leadership", href: "/company/leadership" },
-    { name: "News", href: "/company/news" },
+    { name: "Press & Media", href: "/company/press-media" },
+    { name: "Career", href: "/company/career" },
+    { name: "Partners", href: "/company/partners" },
+    { name: "Contact Us", href: "/company/contact-us" },
   ],
   resources: [
-    { name: "Blog", href: "/resources/blog" },
-    { name: "Case Studies", href: "/resources/case-studies" },
-    { name: "Support", href: "/resources/support" },
-    { name: "Downloads", href: "/resources/downloads" },
+    { name: "Testimonials", href: "/resources/testimonials" },
+    { name: "Insights", href: "/resources/insights" },
+    { name: "Newsletters", href: "/resources/newsletters" },
+    { name: "Glossary / Help", href: "/resources/glossary-help" },
   ],
 };
 
@@ -61,16 +89,20 @@ export default function Footer() {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-gray-200" />
-                <span className="text-gray-200">hello@cygen.com.au</span>
+                <span className="text-gray-200">
+                  sales@cygenconsulting.com.au
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-gray-200" />
-                <span className="text-gray-200">+61 2 8123 4567</span>
+                <span className="text-gray-200">
+                  +61 458 116 301/+61 402 502 649
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-gray-200" />
                 <span className="text-gray-200">
-                  Sydney, Melbourne, Brisbane
+                  Level 3/90 Phillip St, Parramatta, NSW - 2150
                 </span>
               </div>
             </div>
@@ -94,9 +126,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-gray-50">Products</h3>
+            <h3 className="font-semibold mb-4 text-gray-50">Services</h3>
             <ul className="space-y-2">
-              {footerSections.products.map((link) => (
+              {footerSections.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -110,9 +142,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4 text-gray-50">Solutions</h3>
+            <h3 className="font-semibold mb-4 text-gray-50">Products</h3>
             <ul className="space-y-2">
-              {footerSections.solutions.map((link) => (
+              {footerSections.products.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
