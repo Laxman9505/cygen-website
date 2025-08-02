@@ -105,24 +105,24 @@ export const navigationData = [
       ctaHref: "/products",
     },
     items: [
-      {
-        title: "CRM",
-        description:
-          "We provide CRM solutions to help you manage your customers and sales",
-        href: "/products/crm",
-        icon: Users,
-      },
+      // {
+      //   title: "CRM",
+      //   description:
+      //     "We provide CRM solutions to help you manage your customers and sales",
+      //   href: "/products/crm",
+      //   icon: Users,
+      // },
       {
         title: "POS",
         description: "We provide POS solutions to help you manage your sales",
-        href: "/products/pos",
+        href: "/products/cygen-pos",
         icon: SquareTerminal,
       },
       {
         title: "Connect",
         description:
           "We provide Connect solutions to help you manage your customers and sales",
-        href: "/products/connect",
+        href: "/products/cygen-connect",
         icon: Users,
       },
       {
@@ -130,13 +130,20 @@ export const navigationData = [
         description:
           "We provide Cygnage solutions to help you manage your customers and sales",
         href: "/products/cygnage",
-        icon: Code,
+        icon: Users,
       },
       {
         title: "Saute",
         description:
           "We provide Saute solutions to help you manage your customers and sales",
-        href: "/products/saute",
+          href: "/products/saute",
+          icon: Users,
+        },
+      {
+        title: "Online Ordering",
+        description:
+          "We provide Online Ordering solutions to help you manage your customers and sales",
+        href: "/products/cygen-online-ordering",
         icon: Users,
       },
     ],
