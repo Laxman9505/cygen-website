@@ -154,18 +154,6 @@ export function CompanyTimeline() {
             ))}
           </div>
         </div>
-
-        <div className="mt-16 text-center">
-          <p className="text-sm text-gray-500">
-            View Source:{" "}
-            <a
-              href="https://yourstory.com/companies/cygen-it-consulting-and-software-solutions/amp"
-              className="text-blue-600 hover:underline hover:scale-105 transition-transform duration-300 inline-block"
-            >
-              yourstory.com/companies/cygen-it-consulting-and-software-solutions/amp
-            </a>
-          </p>
-        </div>
       </div>
     </section>
   );
