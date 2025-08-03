@@ -3,6 +3,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export default function WhyChooseCygen() {
@@ -212,13 +213,15 @@ export default function WhyChooseCygen() {
                   }`}
                   style={{ transitionDelay: "1400ms" }}
                 >
-                  <Button
-                    variant="outline"
-                    className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-full group hover:scale-105 transition-all duration-300 bg-transparent"
-                  >
-                    Book A Call
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <Link href="/enquiry">
+                    <Button
+                      variant="outline"
+                      className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-full group hover:scale-105 transition-all duration-300 bg-transparent"
+                    >
+                      Book A Call
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

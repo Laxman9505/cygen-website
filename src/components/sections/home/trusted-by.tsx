@@ -7,88 +7,88 @@ import { useEffect, useRef, useState } from "react";
 
 const brandLogos = [
   {
-    name: "Shopify",
-    src: "https://logos-world.net/wp-content/uploads/2020/11/Shopify-Logo.png",
-    width: 120,
-    height: 40,
+    name: "image-1",
+    src: "/images/companies/1.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "Klarna",
-    src: "https://logos-world.net/wp-content/uploads/2021/02/Klarna-Logo.png",
-    width: 100,
-    height: 40,
+    name: "image-2",
+    src: "/images/companies/2.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "Reddit",
-    src: "https://logos-world.net/wp-content/uploads/2020/10/Reddit-Logo.png",
-    width: 100,
-    height: 40,
+    name: "image-3",
+    src: "/images/companies/3.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "Nike",
-    src: "https://logos-world.net/wp-content/uploads/2020/04/Nike-Logo.png",
-    width: 80,
-    height: 40,
+    name: "image-4",
+    src: "/images/companies/4.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "Zapier",
-    src: "https://logos-world.net/wp-content/uploads/2021/02/Zapier-Logo.png",
-    width: 100,
-    height: 40,
+    name: "image-5",
+    src: "/images/companies/5.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "Nubank",
-    src: "https://logos-world.net/wp-content/uploads/2021/02/Nubank-Logo.png",
-    width: 60,
-    height: 40,
+    name: "image-6",
+    src: "/images/companies/6.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "Spotify",
-    src: "https://logos-world.net/wp-content/uploads/2020/06/Spotify-Logo.png",
-    width: 100,
-    height: 40,
+    name: "image-7",
+    src: "/images/companies/7.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "Revolut",
-    src: "https://logos-world.net/wp-content/uploads/2021/02/Revolut-Logo.png",
-    width: 120,
-    height: 40,
+    name: "image-8",
+    src: "/images/companies/8.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "Forever 21",
-    src: "https://logos-world.net/wp-content/uploads/2020/09/Forever-21-Logo.png",
-    width: 100,
-    height: 40,
+    name: "image-9",
+    src: "/images/companies/9.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "Red Bull",
-    src: "https://logos-world.net/wp-content/uploads/2020/09/Red-Bull-Logo.png",
-    width: 100,
-    height: 40,
+    name: "image-10",
+    src: "/images/companies/10.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "Calvin Klein",
-    src: "https://logos-world.net/wp-content/uploads/2020/04/Calvin-Klein-Logo.png",
-    width: 120,
-    height: 40,
+    name: "image-11",
+    src: "/images/companies/11.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "Intercom",
-    src: "https://logos-world.net/wp-content/uploads/2021/02/Intercom-Logo.png",
-    width: 100,
-    height: 40,
+    name: "image-12",
+    src: "/images/companies/12.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "Hermès",
-    src: "https://logos-world.net/wp-content/uploads/2020/04/Hermes-Logo.png",
-    width: 100,
-    height: 40,
+    name: "image-13",
+    src: "/images/companies/13.png",
+    width: 500,
+    height: 100,
   },
   {
-    name: "HelloFresh",
-    src: "https://logos-world.net/wp-content/uploads/2020/11/HelloFresh-Logo.png",
-    width: 120,
-    height: 40,
+    name: "image-14",
+    src: "/images/companies/14.png",
+    width: 500,
+    height: 100,
   },
 ];
 
@@ -153,9 +153,9 @@ export default function TrustedBy() {
                 <Image
                   src={logo.src || "/placeholder.svg"}
                   alt={`${logo.name} logo`}
-                  width={logo.width}
-                  height={logo.height}
-                  className="h-8 lg:h-10 w-auto object-contain hover:scale-105 transition-all duration-300 opacity-80 hover:opacity-100"
+                  width={500}
+                  height={100}
+                  className="h-12 lg:h-16 w-auto object-contain hover:scale-105 transition-all duration-300 opacity-80 hover:opacity-100"
                 />
               </div>
             ))}
@@ -181,9 +181,9 @@ export default function TrustedBy() {
                 <Image
                   src={logo.src || "/placeholder.svg"}
                   alt={`${logo.name} logo`}
-                  width={logo.width}
-                  height={logo.height}
-                  className="h-8 lg:h-10 w-auto object-contain hover:scale-105 transition-all duration-300 opacity-80 hover:opacity-100"
+                  width={500}
+                  height={100}
+                  className="h-12 lg:h-16 w-auto object-contain hover:scale-105 transition-all duration-300 opacity-80 hover:opacity-100"
                 />
               </div>
             ))}

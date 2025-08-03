@@ -231,7 +231,6 @@ export const navigationData = [
         href: "/resources/ramdom-resource-2",
         icon: BookOpen,
       },
-
       {
         title: "Glossary / Help",
         description:

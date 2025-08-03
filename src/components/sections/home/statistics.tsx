@@ -43,7 +43,7 @@ export default function Statistics() {
 
       if (step >= steps) {
         clearInterval(timer);
-        setCounts({ teams: 24, customers: 38, hours: 24 });
+        setCounts({ teams: 2500, customers: 15, hours: 24 });
       }
     }, stepDuration);
   };
@@ -57,7 +57,7 @@ export default function Statistics() {
               {counts.teams}+
             </div>
             <p className="text-gray-300 text-lg animate-slide-in-up animation-delay-200">
-              Loved by 24+ Team Members
+              2500+ SMEs supported and counting
             </p>
           </div>
 
@@ -66,7 +66,7 @@ export default function Statistics() {
               {counts.customers}+
             </div>
             <p className="text-gray-300 text-lg animate-slide-in-up animation-delay-400">
-              Trusted by 38+ customers
+              15+ years in IT Services
             </p>
           </div>
 

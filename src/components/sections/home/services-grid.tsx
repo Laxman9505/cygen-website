@@ -48,7 +48,7 @@ export default function ServicesGrid() {
 
           <div className="bg-blue-600 rounded-3xl p-8 animate-slide-in-right animation-delay-200 hover:scale-105 transition-all duration-500 group">
             <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-blue-100 transition-colors">
-              Data, AI & Automation
+              BI & Data Insights
             </h3>
             <p className="text-blue-100 mb-8 leading-relaxed">
               From raw data to real decisions—build modern platforms,
@@ -56,9 +56,18 @@ export default function ServicesGrid() {
               implement AI/ML, automate workflows.
             </p>
             <Button className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full group-hover:scale-110 transition-all duration-300">
-              Explore AI & Data
+              Explore BI & Data Insights
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
+            <div className="mt-8 animate-fade-in animation-delay-600">
+              <Image
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=center"
+                alt="Cloud infrastructure visualization"
+                width={300}
+                height={150}
+                className="rounded-2xl hover:scale-110 transition-transform duration-500"
+              />
+            </div>
           </div>
 
           <div className="bg-teal-500 rounded-3xl p-8 md:col-span-2 lg:col-span-1 animate-slide-in-up animation-delay-400 hover:scale-105 transition-all duration-500 group">

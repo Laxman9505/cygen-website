@@ -19,51 +19,91 @@ const footerSections = {
       href: "/services/custom-app-development",
     },
     {
-      name: "Business Intelligence & Analytics",
-      href: "/services/business-intelligence-analytics",
+      name: "Managed IT Services",
+      href: "/services/managed-it-services",
     },
-    { name: "Managed IT Services", href: "/services/managed-it-services" },
+    {
+      name: "Data Visualization",
+      href: "/services/data-visualization",
+    },
     {
       name: "Cloud Services & IT Infrastructure",
-      href: "/services/cloud-services-it-infrastructure",
-    },
-    { name: "Cybersecurity", href: "/services/cybersecurity" },
-    {
-      name: "AI Solutions & Business Automation",
-      href: "/services/ai-solutions-business-automation",
+      href: "/services/cloud-services-and-it-infrastructure",
     },
     {
-      name: "IT Consulting & Strategy",
-      href: "/services/it-consulting-strategy",
-    },
-    {
-      name: "Backup & Disaster Recovery",
-      href: "/services/backup-disaster-recovery",
-    },
-    {
-      name: "Digital Workplace Setup",
-      href: "/services/digital-workplace-setup",
+      name: "Cybersecurity",
+      href: "/services/cybersecurity",
     },
   ],
   products: [
-    { name: "CRM", href: "/products/crm" },
-    { name: "POS", href: "/products/pos" },
-    { name: "Connect", href: "/products/connect" },
-    { name: "Cygnage", href: "/products/cygnage" },
-    { name: "Saute", href: "/products/saute" },
+    {
+      name: "CRM",
+      href: "/products/cygen-crm",
+    },
+    {
+      name: "POS",
+      href: "/products/cygen-pos",
+    },
+    {
+      name: "Connect",
+      href: "/products/cygen-connect",
+    },
+    {
+      name: "Cygnage",
+      href: "/products/cygnage",
+    },
+    {
+      name: "Saute",
+      href: "/products/saute",
+    },
+    {
+      name: "Online Ordering",
+      href: "/products/cygen-online-ordering",
+    },
+    {
+      name: "Self Ordering Kiosk",
+      href: "/products/self-ordering-kiosk",
+    },
   ],
   company: [
-    { name: "About Us", href: "/company/about" },
-    { name: "Press & Media", href: "/company/press-media" },
-    { name: "Career", href: "/company/career" },
-    { name: "Partners", href: "/company/partners" },
-    { name: "Contact Us", href: "/company/contact-us" },
+    {
+      name: "About Us",
+      href: "/about-us",
+    },
+    {
+      name: "Press & Media",
+      href: "/media",
+    },
+    {
+      name: "Career",
+      href: "/careers",
+    },
+    {
+      name: "Leadership",
+      href: "/leadership",
+    },
+    {
+      name: "Contact Us",
+      href: "/enquiry",
+    },
   ],
   resources: [
-    { name: "Testimonials", href: "/resources/testimonials" },
-    { name: "Insights", href: "/resources/insights" },
-    { name: "Newsletters", href: "/resources/newsletters" },
-    { name: "Glossary / Help", href: "/resources/glossary-help" },
+    {
+      name: "Newsletters",
+      href: "/blog",
+    },
+    {
+      name: "Testimonials",
+      href: "/resources/ramdom-resource-1",
+    },
+    {
+      name: "Insights",
+      href: "/resources/ramdom-resource-2",
+    },
+    {
+      name: "Glossary / Help",
+      href: "/resources/ramdom-resource-4",
+    },
   ],
 };
 
@@ -109,14 +149,21 @@ export default function Footer() {
 
             <div className="flex space-x-4">
               {[
-                { icon: Facebook, href: "#" },
+                {
+                  icon: Facebook,
+                  href: "https://www.facebook.com/cygenitconsulting",
+                },
                 { icon: Twitter, href: "#" },
-                { icon: Linkedin, href: "#" },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/company/cygen-consulting/",
+                },
                 { icon: Instagram, href: "#" },
               ].map((social, index) => (
                 <Link
                   key={index}
                   href={social.href}
+                  target="_blank"
                   className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
                 >
                   <social.icon className="h-5 w-5" />
@@ -192,7 +239,8 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-200 text-sm">
-            © {new Date().getFullYear()} Cygen Pty Ltd. All rights reserved.
+            © {new Date().getFullYear()} Cygen Consulting Pty Ltd. All rights
+            reserved.
           </p>
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
             <Link

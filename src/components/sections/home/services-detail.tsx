@@ -2,57 +2,43 @@
 
 "use client";
 
-import {
-  BarChart3,
-  Brain,
-  Code,
-  Palette,
-  Server,
-  Smartphone,
-} from "lucide-react";
+import { Cloud, Code, Database, Shield, Smartphone } from "lucide-react";
 
 const services = [
   {
-    icon: Code,
-    title: "Custom Software Development",
-    description:
-      "Create custom software tailored for your unique needs, including front-end, and core back-end technology.",
-    color: "text-green-600",
-  },
-  {
-    icon: BarChart3,
-    title: "QA and Testing",
-    description:
-      "Create custom software tailored for your unique needs, including front-end, and core back-end technology.",
-    color: "text-purple-700",
-  },
-  {
-    icon: Brain,
-    title: "AI and Data Science",
-    description:
-      "Use leading AI, machine learning, and data engineering technologies to unlock business value.",
-    color: "text-orange-500",
-  },
-  {
-    icon: Palette,
-    title: "UX/UI Design",
-    description:
-      "Create beautiful, pixel-perfect, and easy-to-use designs that delight your end users.",
-    color: "text-red-800",
-  },
-  {
     icon: Smartphone,
-    title: "Mobile App Development",
+    title: "Custom App Development",
     description:
-      "Build performant, scalable, and secure mobile applications for iOS and Android devices.",
+      "We develop custom apps tailored to your business needs, delivering innovative solutions that drive growth and efficiency.",
     color: "text-blue-600",
   },
   {
-    icon: Server,
-    title: "Platform and Infrastructure",
+    icon: Shield,
+    title: "Managed IT Services",
     description:
-      "Ensure applications are secure, fault tolerant and highly available with our DevOps and Security engineers.",
-    color: "text-yellow-700",
+      "Comprehensive IT management and support services to keep your infrastructure running smoothly and securely.",
+    color: "text-green-600",
+  },
+  {
+    icon: Database,
+    title: "Data Visualization",
+    description:
+      "Transform complex data into clear, actionable insights through powerful visualization tools and analytics.",
+    color: "text-purple-700",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Services & IT Infrastructure",
+    description:
+      "Scalable cloud solutions and robust IT infrastructure services to modernize your technology stack.",
+    color: "text-orange-500",
+  },
+  {
+    icon: Code,
+    title: "Cybersecurity",
+    description:
+      "Advanced security solutions to protect your valuable data and systems from evolving cyber threats.",
+    color: "text-red-800",
   },
 ];
 
