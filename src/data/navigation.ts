@@ -1,21 +1,20 @@
 /** @format */
 
 import {
-  BarChart3,
   BookOpen,
-  Building2,
   Code,
   Contact,
   Database,
   Download,
-  Handshake,
   MessageCircle,
+  Monitor,
   Newspaper,
   Shield,
   Smartphone,
   SquareTerminal,
   User,
   Users,
+  Users2,
 } from "lucide-react";
 
 export const navigationData = [
@@ -43,10 +42,10 @@ export const navigationData = [
         icon: Shield,
       },
       {
-        title: "Business Intelligence & Analytics",
+        title: "Data Visualization",
         description:
-          "We provide business intelligence and analytics services to help you make data-driven decisions",
-        href: "/services/business-intelligence-analytics",
+          "We provide data visualization services to help you make data-driven decisions",
+        href: "/services/data-visualization",
         icon: Database,
       },
 
@@ -64,34 +63,34 @@ export const navigationData = [
         href: "/services/cybersecurity",
         icon: Code,
       },
-      {
-        title: "AI Solutions & Business Automation",
-        description:
-          "We provide AI solutions and business automation to help you automate your business",
-        href: "/services/ai-solutions-business-automation",
-        icon: BarChart3,
-      },
-      {
-        title: "IT Consulting & Strategy",
-        description:
-          "We provide IT consulting and strategy to help you plan your IT infrastructure",
-        href: "/services/it-consulting-strategy",
-        icon: Building2,
-      },
-      {
-        title: "Backup & Disaster Recovery",
-        description:
-          "We provide backup and disaster recovery services to help you protect your data",
-        href: "/services/backup-disaster-recovery",
-        icon: Shield,
-      },
-      {
-        title: "Digital Workplace Setup",
-        description:
-          "We provide digital workplace setup services to help you set up your digital workplace",
-        href: "/services/digital-workplace-setup",
-        icon: Building2,
-      },
+      // {
+      //   title: "AI Solutions & Business Automation",
+      //   description:
+      //     "We provide AI solutions and business automation to help you automate your business",
+      //   href: "/services/ai-solutions-business-automation",
+      //   icon: BarChart3,
+      // },
+      // {
+      //   title: "IT Consulting & Strategy",
+      //   description:
+      //     "We provide IT consulting and strategy to help you plan your IT infrastructure",
+      //   href: "/services/it-consulting-strategy",
+      //   icon: Building2,
+      // },
+      // {
+      //   title: "Backup & Disaster Recovery",
+      //   description:
+      //     "We provide backup and disaster recovery services to help you protect your data",
+      //   href: "/services/backup-disaster-recovery",
+      //   icon: Shield,
+      // },
+      // {
+      //   title: "Digital Workplace Setup",
+      //   description:
+      //     "We provide digital workplace setup services to help you set up your digital workplace",
+      //   href: "/services/digital-workplace-setup",
+      //   icon: Building2,
+      // },
     ],
   },
 
@@ -105,13 +104,13 @@ export const navigationData = [
       ctaHref: "/products",
     },
     items: [
-      // {
-      //   title: "CRM",
-      //   description:
-      //     "We provide CRM solutions to help you manage your customers and sales",
-      //   href: "/products/crm",
-      //   icon: Users,
-      // },
+      {
+        title: "CRM",
+        description:
+          "We provide CRM solutions to help you manage your customers and sales",
+        href: "/products/cygen-crm",
+        icon: Users,
+      },
       {
         title: "POS",
         description: "We provide POS solutions to help you manage your sales",
@@ -136,15 +135,22 @@ export const navigationData = [
         title: "Saute",
         description:
           "We provide Saute solutions to help you manage your customers and sales",
-          href: "/products/saute",
-          icon: Users,
-        },
+        href: "/products/saute",
+        icon: Users,
+      },
       {
         title: "Online Ordering",
         description:
           "We provide Online Ordering solutions to help you manage your customers and sales",
         href: "/products/cygen-online-ordering",
         icon: Users,
+      },
+      {
+        title: "Self Ordering Kiosk",
+        description:
+          "We provide self ordering kiosk solutions to help you manage your customers and sales",
+        href: "/products/self-ordering-kiosk",
+        icon: Monitor,
       },
     ],
   },
@@ -169,22 +175,22 @@ export const navigationData = [
         title: "Press & Media",
         description:
           "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
-        href: "/company/press-media",
+        href: "/media",
         icon: Newspaper,
       },
       {
         title: "Career",
         description:
           "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
-        href: "/company/career",
+        href: "/careers",
         icon: Users,
       },
       {
-        title: "Partners",
+        title: "Leadership",
         description:
           "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
-        href: "/company/partners",
-        icon: Handshake,
+        href: "/leadership",
+        icon: Users2,
       },
       {
         title: "Contact Us",
