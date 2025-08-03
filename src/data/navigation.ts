@@ -212,6 +212,13 @@ export const navigationData = [
     },
     items: [
       {
+        title: "Newsletters",
+        description:
+          "We provide newsletters to help you stay updated with the latest trends",
+        href: "/blog",
+        icon: MessageCircle,
+      },
+      {
         title: "Testimonials",
         description: "Look at what our clients say about us",
         href: "/resources/ramdom-resource-1",
@@ -224,13 +231,7 @@ export const navigationData = [
         href: "/resources/ramdom-resource-2",
         icon: BookOpen,
       },
-      {
-        title: "Newsletters",
-        description:
-          "We provide newsletters to help you stay updated with the latest trends",
-        href: "/resources/ramdom-resource-3",
-        icon: MessageCircle,
-      },
+
       {
         title: "Glossary / Help",
         description:

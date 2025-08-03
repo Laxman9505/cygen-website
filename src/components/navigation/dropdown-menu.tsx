@@ -65,11 +65,11 @@ export default function DropdownMenu({
             <p className="text-gray-600 mb-4 leading-relaxed text-base">
               {overview.description}
             </p>
-            <Link href={overview.ctaHref}>
-              <Button className="w-full border-2 border-blue-500 text-blue-500 hover:bg-blue-50 font-semibold py-5 px-4 rounded-full transition-all duration-200 text-sm">
-                {overview.ctaText}
-              </Button>
-            </Link>
+            {/* <Link href={overview.ctaHref}> */}
+            <Button className="w-full border-2 border-blue-500 text-blue-500 hover:bg-blue-50 font-semibold py-5 px-4 rounded-full transition-all duration-200 text-sm">
+              {overview.ctaText}
+            </Button>
+            {/* </Link> */}
           </div>
         )}
 
