@@ -20,7 +20,7 @@ export default function ManagedITServicesPage() {
       <EndUserComputing />
       <ManagedCloudServices />
       <FConnectApp />
-      <ManagedITBenefits />6
+      <ManagedITBenefits />
       <PremiumITServices />
       <EssentialManagedServices />
       <UnifiedCommunications />
