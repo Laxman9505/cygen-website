@@ -1,0 +1,176 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/blog/[slug]",
+      "regex": "^/blog/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPslug": "nxtPslug"
+      },
+      "namedRegex": "^/blog/(?<nxtPslug>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/about-us",
+      "regex": "^/about\\-us(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/about\\-us(?:/)?$"
+    },
+    {
+      "page": "/blog",
+      "regex": "^/blog(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/blog(?:/)?$"
+    },
+    {
+      "page": "/careers",
+      "regex": "^/careers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/careers(?:/)?$"
+    },
+    {
+      "page": "/enquiry",
+      "regex": "^/enquiry(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/enquiry(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/leadership",
+      "regex": "^/leadership(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/leadership(?:/)?$"
+    },
+    {
+      "page": "/media",
+      "regex": "^/media(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/media(?:/)?$"
+    },
+    {
+      "page": "/products/cygen-connect",
+      "regex": "^/products/cygen\\-connect(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/cygen\\-connect(?:/)?$"
+    },
+    {
+      "page": "/products/cygen-crm",
+      "regex": "^/products/cygen\\-crm(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/cygen\\-crm(?:/)?$"
+    },
+    {
+      "page": "/products/cygen-online-ordering",
+      "regex": "^/products/cygen\\-online\\-ordering(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/cygen\\-online\\-ordering(?:/)?$"
+    },
+    {
+      "page": "/products/cygen-pos",
+      "regex": "^/products/cygen\\-pos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/cygen\\-pos(?:/)?$"
+    },
+    {
+      "page": "/products/cygnage",
+      "regex": "^/products/cygnage(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/cygnage(?:/)?$"
+    },
+    {
+      "page": "/products/saute",
+      "regex": "^/products/saute(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/saute(?:/)?$"
+    },
+    {
+      "page": "/products/self-ordering-kiosk",
+      "regex": "^/products/self\\-ordering\\-kiosk(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/products/self\\-ordering\\-kiosk(?:/)?$"
+    },
+    {
+      "page": "/services/cloud-services-and-it-infrastructure",
+      "regex": "^/services/cloud\\-services\\-and\\-it\\-infrastructure(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/cloud\\-services\\-and\\-it\\-infrastructure(?:/)?$"
+    },
+    {
+      "page": "/services/custom-app-development",
+      "regex": "^/services/custom\\-app\\-development(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/custom\\-app\\-development(?:/)?$"
+    },
+    {
+      "page": "/services/cybersecurity",
+      "regex": "^/services/cybersecurity(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/cybersecurity(?:/)?$"
+    },
+    {
+      "page": "/services/data-visualization",
+      "regex": "^/services/data\\-visualization(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/data\\-visualization(?:/)?$"
+    },
+    {
+      "page": "/services/managed-it-services",
+      "regex": "^/services/managed\\-it\\-services(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/services/managed\\-it\\-services(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
