@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ITStaffing() {
   return (
@@ -42,10 +43,12 @@ export default function ITStaffing() {
             </p>
 
             <div className="animate-fade-in-up animation-delay-400">
-              <Button className="bg-white border border-blue-300 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-full group hover:scale-105 transition-all duration-300">
-                IT Staffing Solutions
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href={"/services/it-staff-augmentation"}>
+                <Button className="bg-white border border-blue-300 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-full group hover:scale-105 transition-all duration-300">
+                  IT Staffing Solutions
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

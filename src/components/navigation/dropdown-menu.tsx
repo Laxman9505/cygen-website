@@ -1,8 +1,8 @@
 /** @format */
 
-import { Button } from "@/components/ui/button";
 import type { LucideIcon } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 
 interface DropdownItem {
   title: string;
@@ -31,6 +31,7 @@ export default function DropdownMenu({
   menuTitle,
   position = "left",
 }: DropdownMenuProps) {
+  const [hoveredItem, setHoveredItem] = useState<DropdownItem | null>(null);
   const itemsPerRow = 2;
   const rows = [];
 
@@ -46,6 +47,10 @@ export default function DropdownMenu({
     return "w-[48rem]";
   };
 
+  const currentDescription = hoveredItem
+    ? hoveredItem.description
+    : overview?.description;
+
   return (
     <div
       className={`fixed left-1/2 ${getDropdownWidth()} max-h-[28rem] bg-white rounded-2xl shadow-md border border-gray-100 z-50 lg:block hidden transform transition-all duration-200 ease-out animate-in fade-in-0 slide-in-from-top-2`}
@@ -53,7 +58,7 @@ export default function DropdownMenu({
         transform: "translate(-50%, 0)",
         maxWidth: "calc(100vw - 2rem)",
         maxHeight: "calc(100vh - 4rem)",
-        top: "4rem",
+        top: "3.5rem",
       }}
     >
       <div className="flex">
@@ -62,14 +67,9 @@ export default function DropdownMenu({
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               {overview.title}
             </h3>
-            <p className="text-gray-600 mb-4 leading-relaxed text-base">
-              {overview.description}
+            <p className="text-gray-600 mb-4 leading-relaxed text-base transition-all duration-300">
+              {currentDescription}
             </p>
-            {/* <Link href={overview.ctaHref}> */}
-            <Button className="w-full border-2 border-blue-500 text-blue-500 hover:bg-blue-50 font-semibold py-5 px-4 rounded-full transition-all duration-200 text-sm">
-              {overview.ctaText}
-            </Button>
-            {/* </Link> */}
           </div>
         )}
 
@@ -86,6 +86,8 @@ export default function DropdownMenu({
                     key={index}
                     href={item.href}
                     className="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded-lg transition-colors duration-200 group"
+                    onMouseEnter={() => setHoveredItem(item)}
+                    onMouseLeave={() => setHoveredItem(null)}
                   >
                     <div className="w-7 h-7 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-200 flex-shrink-0">
                       <item.icon className="h-4 w-4 text-blue-600 group-hover:text-blue-700 transition-colors" />

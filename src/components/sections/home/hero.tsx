@@ -55,19 +55,19 @@ export default function Hero() {
               />
             </div>
 
-            <div className="absolute top-8 right-4 bg-yellow-500 text-white px-4 py-2 rounded-full text-sm font-medium animate-float">
+            <div className="absolute top-8 right-4 bg-yellow-500 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium animate-float">
               Expand your team and hire globally
             </div>
 
-            <div className="absolute top-32 left-4 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium animate-float">
+            <div className="absolute top-32 left-4 bg-green-500 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium animate-float">
               Managed Services
             </div>
 
-            <div className="absolute bottom-32 right-8 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium ">
+            <div className="absolute bottom-32 right-16 bg-blue-500 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium animate-float">
               Digital Transformation
             </div>
 
-            <div className="absolute bottom-8 left-8 bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium animate-float">
+            <div className="absolute bottom-8 left-8 bg-orange-500 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium animate-float">
               Cloud Solutions
             </div>
           </div>

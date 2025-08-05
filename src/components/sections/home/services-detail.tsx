@@ -2,7 +2,7 @@
 
 "use client";
 
-import { Cloud, Code, Database, Shield, Smartphone } from "lucide-react";
+import { Cloud, Code, Database, Shield, Smartphone, Users } from "lucide-react";
 
 const services = [
   {
@@ -39,6 +39,13 @@ const services = [
     description:
       "Advanced security solutions to protect your valuable data and systems from evolving cyber threats.",
     color: "text-red-800",
+  },
+  {
+    icon: Users,
+    title: "IT Staff Augmentation",
+    description:
+      "Enhance your team with skilled IT professionals on-demand, bridging talent gaps and accelerating project delivery.",
+    color: "text-indigo-600",
   },
 ];
 

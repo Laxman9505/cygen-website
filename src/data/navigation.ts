@@ -3,6 +3,7 @@
 import {
   BookOpen,
   Code,
+  Code2,
   Contact,
   Database,
   Download,
@@ -30,7 +31,8 @@ export const navigationData = [
     items: [
       {
         title: "Custom App Development",
-        description: "We develop custom apps for your business",
+        description:
+          "We develop custom apps for your business. We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
         href: "/services/custom-app-development",
         icon: Smartphone,
       },
@@ -63,34 +65,13 @@ export const navigationData = [
         href: "/services/cybersecurity",
         icon: Code,
       },
-      // {
-      //   title: "AI Solutions & Business Automation",
-      //   description:
-      //     "We provide AI solutions and business automation to help you automate your business",
-      //   href: "/services/ai-solutions-business-automation",
-      //   icon: BarChart3,
-      // },
-      // {
-      //   title: "IT Consulting & Strategy",
-      //   description:
-      //     "We provide IT consulting and strategy to help you plan your IT infrastructure",
-      //   href: "/services/it-consulting-strategy",
-      //   icon: Building2,
-      // },
-      // {
-      //   title: "Backup & Disaster Recovery",
-      //   description:
-      //     "We provide backup and disaster recovery services to help you protect your data",
-      //   href: "/services/backup-disaster-recovery",
-      //   icon: Shield,
-      // },
-      // {
-      //   title: "Digital Workplace Setup",
-      //   description:
-      //     "We provide digital workplace setup services to help you set up your digital workplace",
-      //   href: "/services/digital-workplace-setup",
-      //   icon: Building2,
-      // },
+      {
+        title: "IT Staff Augmentation",
+        description:
+          "We provide IT staff augmentation services to help you manage your IT infrastructure",
+        href: "/services/it-staff-augmentation",
+        icon: Code2,
+      },
     ],
   },
 
@@ -174,28 +155,27 @@ export const navigationData = [
       {
         title: "Press & Media",
         description:
-          "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
+          "Access our latest news, press releases, and media coverage",
         href: "/media",
         icon: Newspaper,
       },
       {
         title: "Career",
         description:
-          "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
+          "Explore our career opportunities and join our team of passionate developers and designers",
         href: "/careers",
         icon: Users,
       },
       {
         title: "Leadership",
-        description:
-          "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
+        description: "Meet the leaders who drive our vision and innovation",
         href: "/leadership",
         icon: Users2,
       },
       {
         title: "Contact Us",
         description:
-          "We are a team of passionate developers and designers who are dedicated to providing the best solutions for our clients",
+          "Get in touch with us to learn more about our services and how we can help you",
         href: "/enquiry",
         icon: Contact,
       },

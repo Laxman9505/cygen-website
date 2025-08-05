@@ -2,92 +2,221 @@
 
 "use client";
 
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import {
+  Code,
+  Database,
+  Monitor,
+  Shield,
+  Smartphone,
+  Users,
+} from "lucide-react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+
+const services = [
+  {
+    title: "Custom App Development",
+    description: "We develop custom apps for your business",
+    href: "/services/custom-app-development",
+    icon: Smartphone,
+  },
+  {
+    title: "Managed IT Services",
+    description:
+      "We provide managed IT services to help you manage your IT infrastructure",
+    href: "/services/managed-it-services",
+    icon: Shield,
+  },
+  {
+    title: "Data Visualization",
+    description:
+      "We provide data visualization services to help you make data-driven decisions",
+    href: "/services/data-visualization",
+    icon: Database,
+  },
+  {
+    title: "Cloud Services & IT Infrastructure",
+    description:
+      "We provide cloud services and IT infrastructure to help you manage your IT infrastructure",
+    href: "/services/cloud-services-and-it-infrastructure",
+    icon: Smartphone,
+  },
+  {
+    title: "Cybersecurity",
+    description:
+      "We provide cybersecurity services to help you protect your data",
+    href: "/services/cybersecurity",
+    icon: Code,
+  },
+  {
+    title: "IT Staff Augmentation",
+    description:
+      "We provide IT staff augmentation services to help you manage your IT infrastructure",
+    href: "/services/it-staff-augmentation",
+    icon: Code,
+  },
+];
 
 const products = [
   {
     title: "CRM",
     description:
-      "Cygen CRM platform developed with a unique approach to working in the disability care sector.",
-    bgColor: "bg-white",
-    textColor: "text-dark",
-  },
-  {
-    title: "LMS",
-    description:
-      "Cygen's LMS is an enterprise learning management system created to serve the most complex and intricate learning ecosystems.",
-    bgColor: "bg-blue-600",
-    textColor: "text-white",
-    featured: true,
+      "We provide CRM solutions to help you manage your customers and sales",
+    href: "/products/cygen-crm",
+    icon: Users,
   },
   {
     title: "POS",
+    description: "We provide POS solutions to help you manage your sales",
+    href: "/products/cygen-pos",
+    icon: Code,
+  },
+  {
+    title: "Connect",
     description:
-      "Thanks to the Hospitality POS solution that makes your life uncomplicated.",
-    bgColor: "bg-white",
-    textColor: "text-dark",
+      "We provide Connect solutions to help you manage your customers and sales",
+    href: "/products/cygen-connect",
+    icon: Users,
+  },
+  {
+    title: "Cygnage",
+    description:
+      "We provide Cygnage solutions to help you manage your customers and sales",
+    href: "/products/cygnage",
+    icon: Users,
+  },
+  {
+    title: "Saute",
+    description:
+      "We provide Saute solutions to help you manage your customers and sales",
+    href: "/products/saute",
+    icon: Users,
+  },
+  {
+    title: "Online Ordering",
+    description:
+      "We provide Online Ordering solutions to help you manage your customers and sales",
+    href: "/products/cygen-online-ordering",
+    icon: Users,
+  },
+  {
+    title: "Self Ordering Kiosk",
+    description:
+      "We provide self ordering kiosk solutions to help you manage your customers and sales",
+    href: "/products/self-ordering-kiosk",
+    icon: Monitor,
   },
 ];
 
 export default function Products() {
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [activeTab, setActiveTab] = useState("services");
+  const [slidesToShow, setSlidesToShow] = useState(3);
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % products.length);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setSlidesToShow(1);
+      } else if (window.innerWidth < 1024) {
+        setSlidesToShow(2);
+      } else {
+        setSlidesToShow(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: slidesToShow,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + products.length) % products.length);
-  };
+  const items = activeTab === "services" ? services : products;
 
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 animate-slide-in-down">
-            Take your business
-            <br />
-            to the next level.
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Our Products & Services
           </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Discover our comprehensive suite of innovative solutions designed to
+            transform your business
+          </p>
         </div>
 
-        <div className="relative max-w-6xl mx-auto animate-fade-in-up animation-delay-300">
-          <div className="flex items-center justify-center space-x-8">
-            {products.map((product, index) => (
-              <div
-                key={index}
-                className={`rounded-3xl p-8 transition-all duration-500 hover:shadow-xl ${
-                  index === currentIndex
-                    ? `${product.bgColor} ${product.textColor} scale-105 shadow-xl min-w-[400px] animate-pulse-subtle`
-                    : "bg-white text-dark scale-95 opacity-60 min-w-[300px] hover:opacity-80 hover:scale-100"
-                }`}
-              >
-                <h3 className="text-2xl font-bold mb-4 animate-slide-in-left">
-                  {product.title}
-                </h3>
-                <p className="leading-relaxed animate-slide-in-left animation-delay-200">
-                  {product.description}
-                </p>
+        <div className="flex justify-center mb-12">
+          <div className="inline-flex bg-white rounded-lg p-1 shadow">
+            <button
+              onClick={() => setActiveTab("services")}
+              className={`px-6 py-2 rounded-md text-sm font-medium transition ${
+                activeTab === "services"
+                  ? "bg-blue-600 text-white"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              Services
+            </button>
+            <button
+              onClick={() => setActiveTab("products")}
+              className={`px-6 py-2 rounded-md text-sm font-medium transition ${
+                activeTab === "products"
+                  ? "bg-blue-600 text-white"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              Products
+            </button>
+          </div>
+        </div>
+
+        <Slider {...sliderSettings}>
+          {items.map((item) => {
+            const IconComponent = item.icon;
+            return (
+              <div key={item.title} className="px-2">
+                <Link href={item.href}>
+                  <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 h-full">
+                    <div className="flex items-center mb-4">
+                      <div className="p-2 bg-blue-100 rounded-lg">
+                        <IconComponent className="h-6 w-6 text-blue-600" />
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                </Link>
               </div>
-            ))}
-          </div>
-
-          <div className="flex justify-center mt-8 space-x-4 animate-fade-in animation-delay-600">
-            <button
-              onClick={prevSlide}
-              className="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center hover:shadow-lg hover:scale-110 transition-all duration-300"
-            >
-              <ChevronLeft className="h-6 w-6 text-gray-600" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center hover:shadow-lg hover:scale-110 transition-all duration-300"
-            >
-              <ChevronRight className="h-6 w-6 text-gray-600" />
-            </button>
-          </div>
-        </div>
+            );
+          })}
+        </Slider>
       </div>
     </section>
   );

@@ -304,6 +304,64 @@ html {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Carousel animations */
+@keyframes carousel-slide {
+  from {
+    opacity: 0;
+    transform: translateX(100px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes carousel-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-carousel-slide {
+  animation: carousel-slide 0.8s ease-out forwards;
+}
+
+.animate-carousel-fade {
+  animation: carousel-fade 0.6s ease-out forwards;
+}
+
+/* Mobile carousel optimizations */
+@media (max-width: 768px) {
+  .carousel-mobile {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .carousel-mobile > * {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+}
+
+/* Smooth transitions for carousel items */
+.carousel-item {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Hide scrollbar utility */
 .scrollbar-hide {
   -ms-overflow-style: none;

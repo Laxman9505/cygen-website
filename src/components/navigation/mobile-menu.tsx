@@ -52,11 +52,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                     <p className="text-sm text-gray-600 mb-3">
                       {section.overview.description}
                     </p>
-                    <Link href={section.overview.ctaHref} onClick={onClose}>
+                    {/* <Link href={section.overview.ctaHref} onClick={onClose}>
                       <Button className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white text-sm py-2">
                         {section.overview.ctaText}
                       </Button>
-                    </Link>
+                    </Link> */}
                   </div>
                 )}
                 <div className="grid grid-cols-1 gap-1">
@@ -84,9 +84,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         ))}
 
         <div className="px-4 py-4">
-          <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-            Book a Free Strategy Session
-          </Button>
+          <Link href={"/enquiry"}>
+            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+              Book a Free Strategy Session
+            </Button>
+          </Link>
         </div>
       </nav>
     </div>

@@ -30,23 +30,23 @@ export default function MissionOverview() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 lg:py-24 ">
+    <section ref={sectionRef} className="py-16 lg:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-3xl lg:text-5xl font-bold text-gray-900 mb-8 max-w-4xl mx-auto leading-tight transition-all duration-1000 ${
+            className={`text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-8 mx-auto leading-tight transition-all duration-1000 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
             }`}
           >
             Creating Technology Solutions That
-            <br />
+            <br className="hidden sm:block" />
             Enable Business To Get The Goals
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
           <div
             className={`relative transition-all duration-1000 delay-300 ${
               isVisible
@@ -55,7 +55,7 @@ export default function MissionOverview() {
             }`}
           >
             <div className="relative">
-              <div className="relative w-96 h-96 mx-auto">
+              <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-96 lg:h-96 mx-auto">
                 <div
                   className={`w-full h-full bg-blue-100 relative overflow-hidden transition-all duration-1000 delay-500 ${
                     isVisible ? "scale-100 rotate-0" : "scale-90 -rotate-6"
@@ -75,7 +75,7 @@ export default function MissionOverview() {
                 </div>
 
                 <div
-                  className={`absolute top-16 left-8 bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-all duration-1000 delay-700 ${
+                  className={`absolute top-8 sm:top-16 left-2 sm:left-8 bg-teal-500 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium shadow-lg transition-all duration-1000 delay-700 ${
                     isVisible
                       ? "opacity-100 translate-y-0 animate-float"
                       : "opacity-0 -translate-y-4"
@@ -85,7 +85,7 @@ export default function MissionOverview() {
                 </div>
 
                 <div
-                  className={`absolute bottom-20 right-8 bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg transition-all duration-1000 delay-1000 ${
+                  className={`absolute bottom-12 sm:bottom-20 right-2 sm:right-8 bg-orange-500 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium shadow-lg transition-all duration-1000 delay-1000 ${
                     isVisible
                       ? "opacity-100 translate-y-0 animate-float"
                       : "opacity-0 translate-y-4"
@@ -99,7 +99,7 @@ export default function MissionOverview() {
           </div>
 
           <div
-            className={`space-y-8 transition-all duration-1000 delay-500 ${
+            className={`space-y-6 sm:space-y-8 transition-all duration-1000 delay-500 ${
               isVisible
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-10"
@@ -114,7 +114,7 @@ export default function MissionOverview() {
               style={{ transitionDelay: "800ms" }}
             >
               <div
-                className={`w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 transition-all duration-500 ${
+                className={`w-8 h-8 sm:w-10 sm:h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-base sm:text-lg flex-shrink-0 transition-all duration-500 ${
                   isVisible ? "scale-100 rotate-0" : "scale-0 rotate-180"
                 }`}
                 style={{ transitionDelay: "900ms" }}
@@ -122,10 +122,10 @@ export default function MissionOverview() {
                 1
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                   Mission
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-lg">
+                <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
                   Cygen empowers Australian businesses with reliable, tailored
                   IT solutions in Cloud, AI, Cybersecurity, and Digital services
                   to drive innovation and growth.
@@ -142,7 +142,7 @@ export default function MissionOverview() {
               style={{ transitionDelay: "1000ms" }}
             >
               <div
-                className={`w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 transition-all duration-500 ${
+                className={`w-8 h-8 sm:w-10 sm:h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-base sm:text-lg flex-shrink-0 transition-all duration-500 ${
                   isVisible ? "scale-100 rotate-0" : "scale-0 rotate-180"
                 }`}
                 style={{ transitionDelay: "1100ms" }}
@@ -150,10 +150,10 @@ export default function MissionOverview() {
                 2
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                   Values
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-lg">
+                <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
                   Innovation, reliability, agility, integrity, security, local
                   expertise, collaboration, and customer focus define Cygen's
                   future-ready IT solutions.
@@ -170,7 +170,7 @@ export default function MissionOverview() {
               style={{ transitionDelay: "1200ms" }}
             >
               <div
-                className={`w-10 h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0 transition-all duration-500 ${
+                className={`w-8 h-8 sm:w-10 sm:h-10 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-base sm:text-lg flex-shrink-0 transition-all duration-500 ${
                   isVisible ? "scale-100 rotate-0" : "scale-0 rotate-180"
                 }`}
                 style={{ transitionDelay: "1300ms" }}
@@ -178,10 +178,10 @@ export default function MissionOverview() {
                 3
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                   Why Cygen..?
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-lg mb-6">
+                <p className="text-gray-600 leading-relaxed text-base sm:text-lg mb-4 sm:mb-6">
                   Cygen offers reliable, innovative, and tailored IT solutions
                   with local expertise to empower Australian business growth.
                 </p>
@@ -197,7 +197,7 @@ export default function MissionOverview() {
                   <Link href="/enquiry">
                     <Button
                       variant="outline"
-                      className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-full group hover:scale-105 transition-all duration-300 bg-transparent"
+                      className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-4 sm:px-6 py-2 sm:py-3 rounded-full group hover:scale-105 transition-all duration-300 bg-transparent text-sm sm:text-base"
                     >
                       Book A Call
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

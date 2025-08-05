@@ -127,7 +127,7 @@ export default function TrustedBy() {
                 : "opacity-0 translate-y-6"
             }`}
           >
-            Trusted by <span className="text-gray-900 font-bold">25,000+</span>{" "}
+            Trusted by <span className="text-gray-900 font-bold">2500+</span>{" "}
             companies from startups to enterprise
           </h2>
         </div>
