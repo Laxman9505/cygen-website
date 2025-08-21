@@ -31,7 +31,7 @@ export default function CloudServicesHero() {
   return (
     <section
       ref={sectionRef}
-      className="bg-pink-50 py-10 lg:py-16 relative overflow-hidden"
+      className="bg-pink-50 py-8 sm:py-10 lg:py-16 relative overflow-hidden"
     >
       <div className="absolute right-0 top-1/2 transform -translate-y-1/2 opacity-10">
         <div className="grid grid-cols-8 gap-3 pr-8">
@@ -48,7 +48,7 @@ export default function CloudServicesHero() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center max-w-7xl mx-auto">
           <div
             className={`transition-all duration-1000 ${
               isVisible
@@ -56,33 +56,33 @@ export default function CloudServicesHero() {
                 : "opacity-0 -translate-x-10"
             }`}
           >
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight mb-4 sm:mb-6">
               Enterprise-Grade
               <br />
               Cloud Infrastructure
             </h1>
 
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
               Scale your business with secure, reliable cloud solutions designed
               for
-              <br />
+              <br className="hidden sm:block" />
               modern enterprises. From migration to management, we've got you
               covered.
             </p>
 
             <div
-              className={`flex items-start space-x-3 mb-8 transition-all duration-1000 delay-300 ${
+              className={`flex items-start space-x-3 mb-6 sm:mb-8 transition-all duration-1000 delay-300 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-4"
               }`}
             >
-              <div className="w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                <Check className="h-4 w-4 text-white" />
+              <div className="w-5 h-5 sm:w-6 sm:h-6 bg-teal-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <Check className="h-3 w-3 sm:h-4 sm:w-4 text-white" />
               </div>
-              <p className="text-gray-600 leading-relaxed text-lg">
+              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed">
                 99.9% uptime guarantee with 24/7 monitoring and support from our
-                <br />
+                <br className="hidden sm:block" />
                 certified cloud architects and infrastructure specialists.
               </p>
             </div>
@@ -94,9 +94,9 @@ export default function CloudServicesHero() {
                   : "opacity-0 translate-y-4"
               }`}
             >
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-16 py-6 text-lg rounded-full group hover:scale-105 transition-all duration-300">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 sm:px-12 lg:px-16 py-3 sm:py-4 lg:py-6 text-sm sm:text-base lg:text-lg rounded-full group hover:scale-105 transition-all duration-300">
                 Start Your Cloud Journey
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function CloudServicesHero() {
             }`}
           >
             <div className="relative max-w-lg mx-auto">
-              <div className="relative w-96 h-96 mx-auto">
+              <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto">
                 <div
                   className={`absolute inset-0 bg-gradient-to-br from-blue-500 to-teal-500 transition-all duration-1000 delay-500 ${
                     isVisible ? "scale-100 rotate-0" : "scale-90 rotate-6"
@@ -138,7 +138,7 @@ export default function CloudServicesHero() {
                   />
 
                   <div
-                    className={`absolute top-16 left-16 bg-blue-500 bg-opacity-90 backdrop-blur-sm text-white px-3 py-2 rounded-full text-xs font-medium shadow-lg transition-all duration-1000 delay-1000 ${
+                    className={`absolute top-12 sm:top-16 left-12 sm:left-16 bg-blue-500 bg-opacity-90 backdrop-blur-sm text-white px-2 sm:px-3 py-1 sm:py-2 rounded-full text-xs font-medium shadow-lg transition-all duration-1000 delay-1000 ${
                       isVisible
                         ? "opacity-100 translate-y-0 animate-float"
                         : "opacity-0 -translate-y-4"
@@ -148,7 +148,7 @@ export default function CloudServicesHero() {
                   </div>
 
                   <div
-                    className={`absolute top-24 right-16 bg-teal-500 bg-opacity-90 backdrop-blur-sm text-white px-3 py-2 rounded-full text-xs font-medium shadow-lg transition-all duration-1000 delay-1200 ${
+                    className={`absolute top-20 sm:top-24 right-12 sm:right-16 bg-teal-500 bg-opacity-90 backdrop-blur-sm text-white px-2 sm:px-3 py-1 sm:py-2 rounded-full text-xs font-medium shadow-lg transition-all duration-1000 delay-1200 ${
                       isVisible
                         ? "opacity-100 translate-y-0 animate-float"
                         : "opacity-0 -translate-y-4"
@@ -159,7 +159,7 @@ export default function CloudServicesHero() {
                   </div>
 
                   <div
-                    className={`absolute bottom-24 left-16 bg-orange-500 bg-opacity-90 backdrop-blur-sm text-white px-3 py-2 rounded-full text-xs font-medium shadow-lg transition-all duration-1000 delay-1400 ${
+                    className={`absolute bottom-20 sm:bottom-24 left-12 sm:left-16 bg-orange-500 bg-opacity-90 backdrop-blur-sm text-white px-2 sm:px-3 py-1 sm:py-2 rounded-full text-xs font-medium shadow-lg transition-all duration-1000 delay-1400 ${
                       isVisible
                         ? "opacity-100 translate-y-0 animate-float"
                         : "opacity-0 translate-y-4"
@@ -170,7 +170,7 @@ export default function CloudServicesHero() {
                   </div>
 
                   <div
-                    className={`absolute bottom-16 right-16 bg-purple-500 bg-opacity-90 backdrop-blur-sm text-white px-3 py-2 rounded-full text-xs font-medium shadow-lg transition-all duration-1000 delay-1600 ${
+                    className={`absolute bottom-12 sm:bottom-16 right-12 sm:right-16 bg-purple-500 bg-opacity-90 backdrop-blur-sm text-white px-2 sm:px-3 py-1 sm:py-2 rounded-full text-xs font-medium shadow-lg transition-all duration-1000 delay-1600 ${
                       isVisible
                         ? "opacity-100 translate-y-0 animate-float"
                         : "opacity-0 translate-y-4"
@@ -181,7 +181,7 @@ export default function CloudServicesHero() {
                   </div>
 
                   <div
-                    className={`absolute top-1/2 left-12 bg-green-500 bg-opacity-90 backdrop-blur-sm text-white px-3 py-2 rounded-full text-xs font-medium shadow-lg transition-all duration-1000 delay-1800 ${
+                    className={`absolute top-1/2 left-8 sm:left-12 bg-green-500 bg-opacity-90 backdrop-blur-sm text-white px-2 sm:px-3 py-1 sm:py-2 rounded-full text-xs font-medium shadow-lg transition-all duration-1000 delay-1800 ${
                       isVisible
                         ? "opacity-100 translate-x-0 animate-float"
                         : "opacity-0 -translate-x-4"
@@ -194,26 +194,26 @@ export default function CloudServicesHero() {
               </div>
 
               <div
-                className={`absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center transition-all duration-1000 delay-1000 shadow-lg ${
+                className={`absolute -top-4 sm:-top-6 -right-4 sm:-right-6 w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center transition-all duration-1000 delay-1000 shadow-lg ${
                   isVisible
                     ? "opacity-100 translate-y-0 animate-float"
                     : "opacity-0 -translate-y-4"
                 }`}
               >
-                <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 bg-white rounded-sm"></div>
+                <div className="w-6 h-6 sm:w-8 sm:h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                  <div className="w-3 h-3 sm:w-4 sm:h-4 bg-white rounded-sm"></div>
                 </div>
               </div>
 
               <div
-                className={`absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center transition-all duration-1000 delay-1200 shadow-lg ${
+                className={`absolute -bottom-6 sm:-bottom-8 -left-6 sm:-left-8 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full flex items-center justify-center transition-all duration-1000 delay-1200 shadow-lg ${
                   isVisible
                     ? "opacity-100 translate-y-0 animate-float"
                     : "opacity-0 translate-y-4"
                 }`}
                 style={{ animationDelay: "1s" }}
               >
-                <div className="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
                   <div className="grid grid-cols-2 gap-1">
                     <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
                     <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
@@ -224,28 +224,28 @@ export default function CloudServicesHero() {
               </div>
 
               <div
-                className={`absolute top-1/2 -left-10 w-14 h-14 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center transition-all duration-1000 delay-900 shadow-lg ${
+                className={`absolute top-1/2 -left-8 sm:-left-10 w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center transition-all duration-1000 delay-900 shadow-lg ${
                   isVisible
                     ? "opacity-100 translate-x-0 animate-float"
                     : "opacity-0 -translate-x-4"
                 }`}
                 style={{ animationDelay: "0.5s" }}
               >
-                <div className="w-7 h-7 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                  <div className="w-3 h-3 bg-white rounded-full"></div>
+                <div className="w-5 h-5 sm:w-7 sm:h-7 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                  <div className="w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full"></div>
                 </div>
               </div>
 
               <div
-                className={`absolute top-1/4 right-6 w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center transition-all duration-1000 delay-1100 shadow-lg ${
+                className={`absolute top-1/4 right-4 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center transition-all duration-1000 delay-1100 shadow-lg ${
                   isVisible
                     ? "opacity-100 translate-y-0 animate-float"
                     : "opacity-0 -translate-y-4"
                 }`}
                 style={{ animationDelay: "1.5s" }}
               >
-                <div className="w-6 h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                  <div className="w-2 h-2 border border-white rounded-full"></div>
+                <div className="w-5 h-5 sm:w-6 sm:h-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 border border-white rounded-full"></div>
                 </div>
               </div>
             </div>

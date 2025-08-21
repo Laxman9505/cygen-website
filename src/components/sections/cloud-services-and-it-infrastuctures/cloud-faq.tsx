@@ -60,11 +60,11 @@ export default function CloudFAQ() {
   };
 
   return (
-    <section ref={sectionRef} className="py-16 lg:py-24 bg-white">
+    <section ref={sectionRef} className="py-12 sm:py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <h2
-            className={`text-3xl lg:text-4xl font-bold text-gray-900 mb-4 transition-all duration-1000 ${
+            className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 transition-all duration-1000 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
@@ -73,7 +73,7 @@ export default function CloudFAQ() {
             Frequently Asked Questions
           </h2>
           <p
-            className={`text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-200 ${
+            className={`text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-6"
@@ -81,7 +81,7 @@ export default function CloudFAQ() {
           >
             Get answers to common questions about our cloud services and IT
             solutions.
-            <br />
+            <br className="hidden sm:block" />
             Can't find what you're looking for? Contact our team for
             personalized assistance.
           </p>
@@ -98,19 +98,19 @@ export default function CloudFAQ() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="bg-white border border-gray-200 rounded-xl sm:rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 rounded-2xl transition-colors duration-300"
+                  className="w-full px-6 sm:px-8 py-4 sm:py-6 text-left flex items-center justify-between hover:bg-gray-50 rounded-xl sm:rounded-2xl transition-colors duration-300"
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 pr-4">
                     {faq.question}
                   </h3>
                   <div className="flex-shrink-0">
                     {openItems.includes(index) ? (
-                      <ChevronUp className="h-5 w-5 text-teal-600 transition-transform duration-300" />
+                      <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-teal-600 transition-transform duration-300" />
                     ) : (
-                      <ChevronDown className="h-5 w-5 text-gray-400 transition-transform duration-300" />
+                      <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400 transition-transform duration-300" />
                     )}
                   </div>
                 </button>
@@ -122,9 +122,9 @@ export default function CloudFAQ() {
                       : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="px-8 pb-6">
+                  <div className="px-6 sm:px-8 pb-4 sm:pb-6">
                     <div className="border-t border-gray-100 pt-4">
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>
@@ -136,21 +136,21 @@ export default function CloudFAQ() {
         </div>
 
         <div
-          className={`text-center mt-12 transition-all duration-1000 delay-500 ${
+          className={`text-center mt-8 sm:mt-12 transition-all duration-1000 delay-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <p className="text-gray-600 mb-6">
+          <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
             Still have questions? We're here to help.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link href="/enquiry">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full transition-all duration-300 hover:scale-105">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base">
                 Contact Our Experts
               </button>
             </Link>
             <Link href="/enquiry">
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-full transition-all duration-300 hover:scale-105">
+              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-2 sm:py-3 rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base">
                 Schedule a Consultation
               </button>
             </Link>

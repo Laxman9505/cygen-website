@@ -2,6 +2,7 @@
 
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
+import AcknowledgementOfCountry from "@/components/sections/home/acknowledgement-of-country";
 import Hero from "@/components/sections/home/hero";
 import ITStaffing from "@/components/sections/home/it-staffing";
 import MissionOverview from "@/components/sections/home/mission-overview";
@@ -24,6 +25,7 @@ export default function Home() {
       <ITStaffing />
       <Testimonials />
       <TrustedBy />
+      <AcknowledgementOfCountry />
       <Footer />
     </main>
   );

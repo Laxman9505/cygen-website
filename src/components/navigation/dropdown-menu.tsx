@@ -9,6 +9,7 @@ interface DropdownItem {
   description: string;
   href: string;
   icon: LucideIcon;
+  backgroundColor: string;
 }
 
 interface Overview {
@@ -16,6 +17,7 @@ interface Overview {
   description: string;
   ctaText: string;
   ctaHref: string;
+  backgroundColor: string;
 }
 
 interface DropdownMenuProps {
@@ -51,6 +53,10 @@ export default function DropdownMenu({
     ? hoveredItem.description
     : overview?.description;
 
+  const currentBackground = hoveredItem
+    ? hoveredItem.backgroundColor
+    : overview?.backgroundColor;
+
   return (
     <div
       className={`fixed left-1/2 ${getDropdownWidth()} max-h-[28rem] bg-white rounded-2xl shadow-md border border-gray-100 z-50 lg:block hidden transform transition-all duration-200 ease-out animate-in fade-in-0 slide-in-from-top-2`}
@@ -63,7 +69,9 @@ export default function DropdownMenu({
     >
       <div className="flex">
         {overview && (
-          <div className="w-1/3 bg-gray-50 p-4 rounded-l-2xl">
+          <div
+            className={`w-1/3 p-4 rounded-l-2xl transition-all duration-300 ${currentBackground}`}
+          >
             <h3 className="text-xl font-bold text-gray-900 mb-3">
               {overview.title}
             </h3>

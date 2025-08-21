@@ -112,11 +112,11 @@ export default function CloudServicesGrid() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 lg:py-24 bg-gray-50">
+    <section ref={sectionRef} className="py-12 sm:py-16 lg:py-24 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 sm:mb-16">
           <h2
-            className={`text-3xl lg:text-4xl font-bold text-gray-900 mb-4 transition-all duration-1000 ${
+            className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 transition-all duration-1000 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
@@ -125,7 +125,7 @@ export default function CloudServicesGrid() {
             Comprehensive Cloud & IT Solutions
           </h2>
           <p
-            className={`text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed transition-all duration-1000 delay-200 ${
+            className={`text-base sm:text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed transition-all duration-1000 delay-200 ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-6"
@@ -133,47 +133,38 @@ export default function CloudServicesGrid() {
           >
             From cloud migration to managed services, we provide end-to-end IT
             solutions
-            <br />
+            <br className="hidden sm:block" />
             tailored to your business needs and growth objectives.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
           {cloudServices.map((service, index) => (
             <div
               key={index}
-              className={`bg-white rounded-3xl overflow-hidden shadow-sm  transition-all duration-500  group ${
+              className={`bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-500 group ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-8"
               }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className={`${service.bgColor} p-8 text-center`}>
-                <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+              <div className={`${service.bgColor} p-6 sm:p-8 text-center`}>
+                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 flex items-center justify-center">
                   <service.icon
-                    className={`h-12 w-12 ${service.color} group-hover:scale-110 transition-transform duration-300`}
+                    className={`h-8 w-8 sm:h-12 sm:w-12 ${service.color} group-hover:scale-110 transition-transform duration-300`}
                   />
                 </div>
               </div>
 
-              <div className="p-8 bg-gray-100">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-teal-600 transition-colors">
+              <div className="p-6 sm:p-8 bg-gray-100">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4 text-center group-hover:text-teal-600 transition-colors">
                   {service.title}
                 </h3>
 
-                <p className="text-gray-600 leading-relaxed text-center mb-6 group-hover:text-gray-700 transition-colors">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-center mb-4 sm:mb-6 group-hover:text-gray-700 transition-colors">
                   {service.description}
                 </p>
-
-                {/* <div className="text-center">
-                  <Button
-                    variant="outline"
-                    className="border-2 border-teal-400 text-teal-600 hover:bg-teal-50 px-6 py-2 rounded-full group-hover:scale-105 transition-all duration-300 bg-transparent"
-                  >
-                    LEARN MORE
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </div> */}
               </div>
             </div>
           ))}
